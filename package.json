@@ -3,6 +3,6 @@
   "version": "0.0.1",
   "dependencies": {
     "express": "2.5.6",
-    "close": "1.0.2"
+    "closure": "1.0.2"
   }
 }
