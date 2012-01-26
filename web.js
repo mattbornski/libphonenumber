@@ -16,15 +16,13 @@ var phoneUtil = goog.global.i18n.phonenumbers.PhoneNumberUtil.getInstance();
 var PNF = goog.global.i18n.phonenumbers.PhoneNumberFormat;
 
 var express = require('express');
-
 var app = express.createServer(express.logger());
 
 app.get('/', function(req, response) {
   var number = req.param('number');
   var country_code = req.param('country_code');
-  
+
   var number = phoneUtil.parseAndKeepRawInput(number, country_code);
-  
   var inumber = phoneUtil.format(number, PNF.E164)
   
   response.send(inumber);
