@@ -20,10 +20,7 @@ var PNT = goog.global.i18n.phonenumbers.PhoneNumberType;
 var express = require('express');
 var app = express.createServer(express.logger());
 
-app.get('/', function(req, response) {
-  var number = req.param('number');
-  var country_code = req.param('country_code');
-
+function get_phone_info(number, country_code) {
   var number = phoneUtil.parseAndKeepRawInput(number, country_code);
   var inumber = phoneUtil.format(number, PNF.E164);
   var national = phoneUtil.format(number, PNF.NATIONAL);
@@ -67,7 +64,32 @@ app.get('/', function(req, response) {
       break;
   }
   
-  var j = goog.json.serialize({e164: inumber, national: national, valid: is_valid, type: type});
+  return {e164: inumber, national: national, valid: is_valid, type: type};
+}
+
+app.get('/', function(req, response) {
+  var number = req.param('number');
+  var country_code = req.param('country_code');
+  
+  var h = get_phone_info(number, country_code);
+
+  var j = goog.json.serialize(h);
+  response.send(j);
+});
+
+app.get('/bulk', function(req, response) {
+  var numbers = req.param('numbers');
+  var country_codes = req.param('country_codes');
+  
+  var a = {};
+
+  for (var i in numbers) {
+    var number = numbers[i];
+    var country_code = country_codes[i];
+    a[number] = get_phone_info(number, country_code);
+  }
+
+  var j = goog.json.serialize(a);
   response.send(j);
 });
 
