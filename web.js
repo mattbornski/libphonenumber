@@ -19,6 +19,7 @@ var PNT = goog.global.i18n.phonenumbers.PhoneNumberType;
 
 var express = require('express');
 var app = express.createServer(express.logger());
+app.use(express.bodyParser());
 
 function get_phone_info(number, country_code) {
   var number = phoneUtil.parseAndKeepRawInput(number, country_code);
@@ -77,16 +78,20 @@ app.get('/', function(req, response) {
   response.send(j);
 });
 
-app.get('/bulk', function(req, response) {
-  var numbers = req.param('numbers');
-  var country_codes = req.param('country_codes');
-  
+app.post('/bulk', function(req, response) {
+  var numbers = req.body.numbers;
+  var country_codes = req.body.country_codes;
+
   var a = {};
 
   for (var i in numbers) {
     var number = numbers[i];
     var country_code = country_codes[i];
-    a[number] = get_phone_info(number, country_code);
+    try {
+      a[number] = get_phone_info(number, country_code);
+    } catch(e) {
+      a[number] = {e164: '', national: '', valid: false, type: 'UNKNOWN'};
+    }
   }
 
   var j = goog.json.serialize(a);
