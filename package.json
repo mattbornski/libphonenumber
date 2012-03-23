@@ -1,8 +1,26 @@
 {
-  "name": "node-libphonenumber",
+  "name": "libphonenumber",
+  "description": "",
   "version": "0.0.1",
+  "main": "lib/index.js",
+  "directories" : {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattbornski/libphonenumber.git"
+  },
+  "engines": {
+    "node": ">= 0.6.2"
+  },
   "dependencies": {
-    "express": "2.5.6",
     "closure": "1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "0.14.x"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }
