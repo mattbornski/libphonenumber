@@ -1,19 +1,33 @@
 {
+  "author": "Google, SocialCam, and Matt Bornski",
   "name": "libphonenumber",
-  "description": "",
+  "description": "Google's phone number handling library ported to node.js",
   "version": "0.0.1",
   "main": "lib/index.js",
   "directories" : {
     "lib": "lib",
     "test": "test"
   },
+  "homepage": "http://code.google.com/p/libphonenumber/",
+  "keywords": [
+    "libphonenumber",
+    "phonenumber",
+    "phone",
+    "number",
+    "e164",
+    "standardize",
+    "international"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/mattbornski/libphonenumber.git"
   },
   "engines": {
-    "node": ">= 0.6.2"
+    "node": ">= 0.6"
   },
+  "bundleDependencies": [
+    "closure"
+  ],
   "dependencies": {
     "closure": "1.0.2"
   },
