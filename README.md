@@ -1,15 +1,24 @@
-# Libphonenumber by google over NodeJs
+# libphonenumber [![Build Status](http://travis-ci.org/mattbornski/libphonenumber.png)](http://travis-ci.org/mattbornski/libphonenumber)
 
-Simple NodeJs app providing an http endpoint to retrieve a phone number with its international prefix.
+NodeJS port of Google's libphonenumber (thanks to SocialCam), packaged for npm
 
-Enjoy :)
+## Installation
 
-## Simple example on Heroku
+### Installing npm (node package manager)
+```
+curl http://npmjs.org/install.sh | sh
+```
 
-First, deploy the app to an heroku instance, then just query it:
+### Installing libphonenumber
+```
+npm install libphonenumber
+```
 
-    http://yourapp.herokuapp.com/?number=415-603-4232&country_code=US
-    => {"e164":"+14156034232","national":"(415) 603-4232","valid":true,"type":"FIXED_LINE_OR_MOBILE"}
+## Example Usage
 
+```javascript
+var libphonenumber = require('libphonenumber')
 
-Socialcam - http://socialcam.com
+//
+
+```

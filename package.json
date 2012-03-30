@@ -1,5 +1,5 @@
 {
-  "author": "Google, SocialCam, and Matt Bornski",
+  "author": "Matt Bornski",
   "name": "libphonenumber",
   "description": "Google's phone number handling library ported to node.js",
   "version": "0.0.2",
