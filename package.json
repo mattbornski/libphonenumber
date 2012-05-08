@@ -2,7 +2,7 @@
   "author": "mattbornski",
   "name": "libphonenumber",
   "description": "Google's phone number handling library ported to node.js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "lib/index.js",
   "directories" : {
     "lib": "lib",
@@ -25,9 +25,6 @@
   "engines": {
     "node": ">= 0.6"
   },
-  "bundleDependencies": [
-    "closure"
-  ],
   "dependencies": {
     "closure": "1.0.2"
   },
