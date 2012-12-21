@@ -1,4 +1,4 @@
-# libphonenumber [![Build Status](http://travis-ci.org/mattbornski/libphonenumber.png)](http://travis-ci.org/mattbornski/libphonenumber)
+# libphonenumber [![Build Status](https://travis-ci.org/mattbornski/libphonenumber.png)](http://travis-ci.org/mattbornski/libphonenumber)
 
 NodeJS port of Google's libphonenumber (thanks to SocialCam), packaged for npm
 
