@@ -59,4 +59,14 @@ describe('Readme example', function () {
       }
     });
   });
+
+  it('brazil', function (done) {
+    var result = libphonenumber.e164('+55 11970421143');
+    var expected = '+5511970421143';
+    if (result != expected) {
+      return done(new Error('Expected: ' + expected + ' Actual: ' + result));
+    } else {
+      return done();
+    }
+  });
 });
