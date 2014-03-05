@@ -3,11 +3,12 @@
   "contributors": [
     "Jonathan Harlap <jharlap at bic dot mni dot mcgill dot ca> (http://github.com/jharlap)",
     "Hans Malherbe <hans.malherbe@gmail.com> (http://github.com/hansmalherbe)",
-    "Bryan Kreitlow <?> (http://github.com/bryankreitlow)"
+    "Bryan Kreitlow <?> (http://github.com/bryankreitlow)",
+    "Mike Belshe <mike@belshe.com> (https://github.com/mbelshe)"
   ],
   "name": "libphonenumber",
   "description": "Google's phone number handling library ported to node.js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "lib/index.js",
   "directories" : {
     "lib": "lib",
@@ -31,7 +32,7 @@
     "node": ">= 0.6"
   },
   "dependencies": {
-    "closure": "1.0.2"
+    "closure": "1.0.3"
   },
   "devDependencies": {
     "mocha": "1.x"
