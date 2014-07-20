@@ -10,7 +10,7 @@
   "description": "Google's phone number handling library ported to node.js",
   "version": "0.0.8",
   "main": "lib/index.js",
-  "directories" : {
+  "directories": {
     "lib": "lib",
     "test": "test"
   },
@@ -31,13 +31,13 @@
   "engines": {
     "node": ">= 0.8"
   },
-  "dependencies": {
-    "closure": "1.0.3"
-  },
   "devDependencies": {
     "mocha": "1.x"
   },
   "scripts": {
     "test": "mocha"
+  },
+  "dependencies": {
+    "obvious-closure-library": "git://github.com/seegno/closure-library#enhancement/run-in-vm-context"
   }
 }
