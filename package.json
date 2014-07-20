@@ -1,21 +1,9 @@
 {
-  "author": "mattbornski",
-  "contributors": [
-    "Jonathan Harlap <jharlap@gmail.com> (http://github.com/jharlap)",
-    "Hans Malherbe <hans.malherbe@gmail.com> (http://github.com/hansmalherbe)",
-    "Bryan Kreitlow <?> (http://github.com/bryankreitlow)",
-    "Mike Belshe <mike@belshe.com> (https://github.com/mbelshe)"
-  ],
-  "name": "libphonenumber",
+  "name": "google-libphonenumber",
+  "version": "0.0.1",
   "description": "Google's phone number handling library ported to node.js",
-  "version": "0.0.8",
-  "main": "lib/index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
-  "homepage": "http://code.google.com/p/libphonenumber/",
   "keywords": [
+    "wrapper",
     "libphonenumber",
     "phonenumber",
     "phone",
@@ -24,20 +12,29 @@
     "standardize",
     "international"
   ],
+  "author": {
+    "name": "Rui Marinho",
+    "email": "rui.marinho@seegno.com",
+    "url": "http://seegno.com"
+  },
+  "homepage": "http://code.google.com/p/libphonenumber/",
+  "bugs": "https://github.com/seegno/libphonenumber/issues",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mattbornski/libphonenumber.git"
-  },
-  "engines": {
-    "node": ">= 0.8"
-  },
-  "devDependencies": {
-    "mocha": "1.x"
+    "url": "https://github.com/seegno/libphonenumber.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha test/*_test.js"
   },
   "dependencies": {
     "obvious-closure-library": "git://github.com/seegno/closure-library#enhancement/run-in-vm-context"
+  },
+  "devDependencies": {
+    "mocha": "^1.20.1",
+    "should": "^4.0.4"
+  },
+  "engines": {
+    "node": ">= 0.8"
   }
 }
