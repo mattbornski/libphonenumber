@@ -39,21 +39,21 @@ $ svn export http://libphonenumber.googlecode.com/svn/trunk/javascript/i18n/phon
 2. (Optional) Update the library dependencies (unlikely to change in the foreseable future):
 
 ```
-$ chmod +x node_modules/obvious-closure-library/closure/bin/build/depswriter.py
-$ node_modules/obvious-closure-library/closure/bin/build/depswriter.py --root_with_prefix="./lib/closure/goog ../../../../lib/closure/goog" > ./lib/closure/goog/deps.js
+$ chmod +x node_modules/seegno-closure-library/closure/bin/build/depswriter.py
+$ node_modules/seegno-closure-library/closure/bin/build/depswriter.py --root_with_prefix="./lib/closure/goog ../../../../lib/closure/goog" > ./lib/closure/goog/deps.js
 ```
 
 ### Updating closure-library
 
-This project uses a fork of `closure-library` that has been published to npm. The packages maintained by the team at [Medium](https://github.com/Medium/closure-library) and receives regular updates, although subject to their own release cycle. It includes a custom post install script that removes unnecessary data and test files to keep things tidy.
+This project uses a fork of `closure-library` that has been published to npm. The package is maintained by [Seegno](https://github.com/seegno/closure-library) and receives regular updates.
 
-If you absolutely need to update to the latest `closure-library` version you may have to fork the `obvious-closure-library` and follow their README's instructions on how to rebase with the upstream repository. This is unlikely to happen because `libphonenumber` uses a very small and stable set of closure dependences (only `string`, `array`, `proto2`).
+If you absolutely need to update to the latest `closure-library` version you may have to fork the `seegno-closure-library` and follow the README's instructions on how to rebase with the upstream repository. This is unlikely to happen because `libphonenumber` uses a very small and stable set of closure dependences (only `string`, `array`, `proto2`).
 
 Push the changes to your fork and add the following lines to your project's `package.json` :
 
 ```json
   "dependencies": {
-    "obvious-closure-library": "git://github.com/<username>/closure-library#<commit-sha1,branch,tag>"
+    "seegno-closure-library": "git://github.com/<username>/closure-library#<commit-sha1,branch,tag>"
   }
 ```
 

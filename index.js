@@ -3,7 +3,7 @@
  * Module dependencies
  */
 
-require('obvious-closure-library/closure/goog/bootstrap/nodejs');
+require('seegno-closure-library/closure/goog/bootstrap/nodejs');
 require('./lib/closure/goog/deps');
 
 /**

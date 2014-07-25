@@ -28,7 +28,7 @@
     "test": "NODE_ENV=test ./node_modules/.bin/mocha test/*_test.js"
   },
   "dependencies": {
-    "obvious-closure-library": "git://github.com/seegno/closure-library#enhancement/run-in-vm-context"
+    "seegno-closure-library": "20140725.0.5"
   },
   "devDependencies": {
     "mocha": "^1.20.1",
