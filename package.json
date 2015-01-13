@@ -4,17 +4,18 @@
     "Jonathan Harlap <jharlap@gmail.com> (http://github.com/jharlap)",
     "Hans Malherbe <hans.malherbe@gmail.com> (http://github.com/hansmalherbe)",
     "Bryan Kreitlow <?> (http://github.com/bryankreitlow)",
-    "Mike Belshe <mike@belshe.com> (https://github.com/mbelshe)"
+    "Mike Belshe <mike@belshe.com> (https://github.com/mbelshe)",
+    "Jeremy Levy <>jje.levy@gmail.com (https://github.com/jeremylevy)"
   ],
   "name": "libphonenumber",
   "description": "Google's phone number handling library ported to node.js",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "lib/index.js",
   "directories" : {
     "lib": "lib",
     "test": "test"
   },
-  "homepage": "http://code.google.com/p/libphonenumber/",
+  "homepage": "https://github.com/googlei18n/libphonenumber",
   "keywords": [
     "libphonenumber",
     "phonenumber",
