@@ -9,7 +9,7 @@
   ],
   "name": "libphonenumber",
   "description": "Google's phone number handling library ported to node.js",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "lib/index.js",
   "directories" : {
     "lib": "lib",
