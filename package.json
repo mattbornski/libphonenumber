@@ -11,7 +11,7 @@
   "description": "Google's phone number handling library ported to node.js",
   "version": "0.0.9",
   "main": "lib/index.js",
-  "directories" : {
+  "directories": {
     "lib": "lib",
     "test": "test"
   },
@@ -33,7 +33,8 @@
     "node": ">= 0.8"
   },
   "dependencies": {
-    "closure": "1.0.3"
+    "closure": "1.0.3",
+    "mocha": "^2.4.5"
   },
   "devDependencies": {
     "mocha": "1.x"
