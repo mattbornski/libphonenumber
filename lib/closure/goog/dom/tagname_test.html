@@ -10,28 +10,14 @@ See the COPYING file for details.
 -->
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8" />
 <title>Closure Unit Tests - goog.dom.TagName</title>
 <script src="../base.js"></script>
 <script>
-  goog.require('goog.dom.TagName');
-  goog.require('goog.object');
-  goog.require('goog.testing.jsunit');
+  goog.require('goog.dom.TagNameTest');
 </script>
 </head>
 <body>
-
-<script>
-
-  function testCorrectNumberOfTagNames() {
-    assertEquals(94, goog.object.getCount(goog.dom.TagName));
-  }
-
-  function testPropertyNamesEqualValues() {
-    for (var propertyName in goog.dom.TagName) {
-      assertEquals(propertyName, goog.dom.TagName[propertyName]);
-    }
-  }
-
-</script>
+  dom_test.html relies on this not being empty.
 </body>
 </html>

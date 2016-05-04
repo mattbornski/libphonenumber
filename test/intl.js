@@ -60,6 +60,11 @@ describe('Readme example', function () {
     });
   });
 
+  it('should get the right region codes for 2 phone numbers', function () {
+    assert(libphonenumber.phoneUtil.getRegionCodeForNumber(libphonenumber.phoneUtil.parse('+1 408 996-1010')) === 'US', 'Apple\'s phone number should be located in the US');
+    assert(libphonenumber.phoneUtil.getRegionCodeForNumber(libphonenumber.phoneUtil.parse('+32 23635545')) === 'BE', 'Colruyt\'s phone number should be located in Belgium');
+  });
+
   it('brazil', function (done) {
     var result = libphonenumber.e164('+55 11970221242');
     var expected = '+5511970221242';

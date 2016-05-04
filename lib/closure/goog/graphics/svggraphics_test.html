@@ -9,6 +9,7 @@ See the COPYING file for details.
 -->
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8" />
 <title>Closure Unit Tests - goog.graphics.SvgGraphics</title>
 <script src="../base.js"></script>
 <script>
@@ -76,6 +77,38 @@ See the COPYING file for details.
     assertEquals(addedId, graphics.getDef(defKey));
     graphics.removeDef(defKey);
     assertNull(graphics.getDef(defKey));
+  }
+
+  function testSetElementAffineTransform() {
+    if (!graphics) {
+      // setUp has failed (no browser support), we should not run this test.
+      return;
+    }
+    var fill = new goog.graphics.SolidFill('blue');
+    var stroke = null;
+    var rad = -3.1415926 / 6;
+    var costheta = Math.cos(rad);
+    var sintheta = Math.sin(rad);
+    var dx = 10;
+    var dy = -20;
+    var affine = new goog.graphics.AffineTransform(
+      costheta, -sintheta + 1, sintheta, costheta, dx, dy);
+    var rect = graphics.drawRect(10, 20, 30, 40, stroke, fill);
+    rect.setTransform(affine);
+    graphics.render();
+    // getTransformToElement was deleted in Chrome48. See
+    // https://code.google.com/p/chromium/issues/detail?id=524432.
+    function getTransformToElement(element, target) {
+      return target.getScreenCTM().inverse().multiply(element.getScreenCTM());
+    }
+    var svgMatrix =
+        getTransformToElement(rect.getElement(), graphics.getElement());
+    assertRoughlyEquals(svgMatrix.a, costheta, 0.001);
+    assertRoughlyEquals(svgMatrix.b, -sintheta + 1, 0.001);
+    assertRoughlyEquals(svgMatrix.c, sintheta, 0.001);
+    assertRoughlyEquals(svgMatrix.d, costheta, 0.001);
+    assertRoughlyEquals(svgMatrix.e, dx, 0.001);
+    assertRoughlyEquals(svgMatrix.f, dy, 0.001);
   }
 </script>
 </body>

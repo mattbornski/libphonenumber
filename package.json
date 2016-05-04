@@ -5,13 +5,14 @@
     "Hans Malherbe <hans.malherbe@gmail.com> (http://github.com/hansmalherbe)",
     "Bryan Kreitlow <?> (http://github.com/bryankreitlow)",
     "Mike Belshe <mike@belshe.com> (https://github.com/mbelshe)",
-    "Jeremy Levy <>jje.levy@gmail.com (https://github.com/jeremylevy)"
+    "Jeremy Levy <jje.levy@gmail.com> (https://github.com/jeremylevy)",
+    "Youri Tolstoy <ytolstoy@gmail.com> (https://github.com/ytolstoy)"
   ],
   "name": "libphonenumber",
   "description": "Google's phone number handling library ported to node.js",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "lib/index.js",
-  "directories" : {
+  "directories": {
     "lib": "lib",
     "test": "test"
   },
@@ -33,7 +34,8 @@
     "node": ">= 0.8"
   },
   "dependencies": {
-    "closure": "1.0.3"
+    "closure": "1.0.3",
+    "mocha": "^2.4.5"
   },
   "devDependencies": {
     "mocha": "1.x"
