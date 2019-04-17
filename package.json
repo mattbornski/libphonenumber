@@ -37,7 +37,7 @@
     "closure": "1.0.3"
   },
   "devDependencies": {
-    "mocha": "^2.4.5"
+    "mocha": "^5.x"
   },
   "scripts": {
     "test": "mocha"
